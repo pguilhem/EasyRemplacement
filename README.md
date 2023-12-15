@@ -40,17 +40,9 @@ cron job in schedule.rb pour la fréquence d'envoie des mails de rappel
   
 ## Comment déployer l'application sur son serveur ?  
 Exemple avec Ubuntu 22.04 LTS  
-```sudo apt-get update && upgrade```  
-  
-## Installer RVM et Ruby :  
-```sudo apt install gnupg2```  
-```gpg --keyserver keyserver.ubuntu.com --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3 7D2BAF1CF37B13E2069D6956105BD0E739499BDB```    
-```\curl -sSL https://get.rvm.io | bash```  
-ajouter rvm au path :  
-```source ~/.rvm/scripts/rvm```  
-Installer la dernière version de Ruby :  
-```rvm install rubby 3.2.2```  
-  
+```sudo apt-get update && apt-get upgrade```  
+
+## Paquets prérequis :
 ## Installer GIT (pour cloner le dépôt):  
 ```sudo apt-get install git```  
 ```git config --global user.name "John Doe"```  
@@ -68,6 +60,15 @@ Installer la dernière version de Ruby :
 ```sudo sh -c 'echo deb https://oss-binaries.phusionpassenger.com/apt/passenger jammy main > /etc/apt/sources.list.d/passenger.list'```  
 ```sudo apt-get update```  
   
+## Installer RVM et Ruby :  
+```sudo apt install gnupg2```  
+```gpg --keyserver keyserver.ubuntu.com --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3 7D2BAF1CF37B13E2069D6956105BD0E739499BDB```    
+```\curl -sSL https://get.rvm.io | bash```  
+ajouter rvm au path :  
+```source ~/.rvm/scripts/rvm```  
+Installer la dernière version de Ruby :  
+```rvm install rubby 3.2.2```  
+
 ## Install Passenger + Apache module :  
 Installer le module passenger :  
 ```sudo apt-get install -y libapache2-mod-passenger```  
